@@ -36,7 +36,8 @@ void ofApp::setup(){
 		sliderFrameRate.addListener(this, &ofApp::setFrameRate);
 		
 		//sound
-		//		soundPlayer.loadSound("");
+		soundPlayer.loadSound("kin_6k.wav");
+		soundPlayer.setMultiPlay(true);
 }
 
 void ofApp::setFrameRate(int & sliderFrameRate){
@@ -122,8 +123,8 @@ void ofApp::draw(){
 				}
 				ofSetLineWidth(sliderPalseLineWidth);
 				ofEnableBlendMode(OF_BLENDMODE_ADD);
+				soundPlayer.play();
 				mesh.draw();
-				
 		}
 		fbo.end();
 		ofEnableBlendMode(OF_BLENDMODE_ALPHA);

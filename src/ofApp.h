@@ -43,5 +43,5 @@ class ofApp : public ofBaseApp{
 		ofxToggle toggleDrawImage; //done
 		
 		ofRectangle rectangleImage;
-		ofSoundPlayer soudPlayer;
+		ofSoundPlayer soundPlayer;
 };
