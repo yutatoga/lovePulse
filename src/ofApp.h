@@ -24,6 +24,9 @@ class ofApp : public ofBaseApp{
 		void fullScreen();
 		void setFrameRate(int & sliderFrameRate);
 		
+		void addMeshAction(bool boolAddMesh);
+		void eraseMeshAction(bool boolEraseMesh);
+		
 		ofxDelaunay triangulation;
 		ofFbo fbo;
 		ofImage image;
@@ -41,7 +44,14 @@ class ofApp : public ofBaseApp{
 		ofxIntSlider sliderFrameRate;
 		ofxButton buttonReset; //done
 		ofxToggle toggleDrawImage; //done
+		ofxToggle toggleSimpleColorPulse;
+		ofxToggle toggleLive;
 		
 		ofRectangle rectangleImage;
 		ofSoundPlayer soundPlayer;
+		
+		//for live
+		bool doAdd;
+		bool doErase;
+		bool doFill;
 };
